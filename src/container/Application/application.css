@@ -1,0 +1,130 @@
+.main-container{
+    display:flex;
+    justify-content: center;
+    /* margin-top: 60px; */
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: capitalize;
+    border-bottom: 1px solid #fff;
+}
+
+
+.heading {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: 13px;
+    font-weight: 600;
+    color:#193161
+}
+
+.button{
+    display: flex; 
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-back{
+    margin-right: 15px;
+    padding: 4px 25px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: transparent;
+} 
+.btn-next{
+    width: 200px;
+    margin-left: 15px;
+    padding: 4px 25px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    background: transparent;
+} 
+
+.asidebar {
+    /* //padding-top: 60px; */
+    background-color: #193161;
+    height:calc(100vh - 52px);
+}
+
+.component {
+    padding-top: 60px;
+    height: calc(100vh - 52px);;
+}
+
+.mobile{
+    padding: 0!important;
+}
+
+.ReactTable{
+    min-height: 500px;
+}
+
+.ReactTable .rt-thead .rt-resizable-header-content{
+    text-align: left!important;
+    text-transform: capitalize;
+}
+
+.add_info_btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.add_info_btn:focus{
+    outline: 0;
+    border:none;
+}
+
+.add_info_btn  i {
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #193161;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.add_info_btn  span {
+    color: #193161;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #193161;
+}
+
+.dashboard_heading {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+}
+
+.edit_icon{
+    color:#428bca;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.delete_icon{
+    color:	#d9534f;
+    font-size: 14px;
+}
+

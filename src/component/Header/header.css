@@ -1,0 +1,37 @@
+.header {
+    background-color: #193161;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+.header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header h3 {
+    color: #4390BC;
+    margin:0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+header span {
+    margin-left: 38px;
+    text-align: right;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+    top: -6px;
+}
