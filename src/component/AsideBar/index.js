@@ -3,26 +3,30 @@ import history from '../../history';
 class AsideBar extends Component {
     state = {
         userInfo:[
-            {
+              {
                 name: "Personal Info",
                 route: ""
+              },
+              {
+                name: "View",
+                route: "/table"
               }, 
-              {
-                name: "Education Info",
-                route: "positionInfo"
-              },
-              {
-                name: "Eductaion",
-                route: "education"
-              },
-              {
-                name: "Skills",
-                route: "skills"
-              },
-              {
-                name: "Experience",
-                route: "experience"
-              }
+              // {
+              //   name: "Education Info",
+              //   route: "positionInfo"
+              // },
+              // {
+              //   name: "Eductaion",
+              //   route: "education"
+              // },
+              // {
+              //   name: "Skills",
+              //   route: "skills"
+              // },
+              // {
+              //   name: "Experience",
+              //   route: "experience"
+              // }
         ]
     }
     render(){

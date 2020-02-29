@@ -22,19 +22,14 @@ class PersonalInfo extends Component {
     };
     
     componentWillMount() {
-        console.log('Mount -',this.state.data)
         if(localStorage.details !== undefined){
-
-       
-      
-            let allPersonInfo = JSON.parse(localStorage.getItem("details")) 
+        let allPersonInfo = JSON.parse(localStorage.getItem("details")) 
         let personInfo = JSON.parse(JSON.stringify(this.state.personInfo))
             personInfo = allPersonInfo
             this.setState({
                 personInfo:allPersonInfo
             })   
         if(history.location.state !== undefined){
-            console.log('history',history.location.state)
             let f_name = history.location.state.itemName
             let res = personInfo.filter((item, index) => {
                 let personObj
@@ -43,7 +38,6 @@ class PersonalInfo extends Component {
                     }
                 return personObj
             }) 
-            console.log('PerObj',res)
             this.setState({
                 data:res[0],
                 showSave: false,
@@ -53,9 +47,8 @@ class PersonalInfo extends Component {
     }      
     }
 
-    
-   
-   getInputFieldsValue = (e) => {
+
+    getInputFieldsValue = (e) => {
         let data = JSON.parse(JSON.stringify(this.state.data))
         if(e.target.name == "mobileNo"){
              const re = /^[0-9\b]+$/;
@@ -89,7 +82,7 @@ class PersonalInfo extends Component {
 
     savePersonInfo = () => {
         localStorage.setItem("details", JSON.stringify(this.state.personInfo))
-        
+        setTimeout(() =>  this.resetForm(), 2000)
     }
 
     notify = () => {
@@ -108,13 +101,12 @@ class PersonalInfo extends Component {
                     personInfo
                 }, () => {this.savePersonInfo()})
             }
-
             else{
                 this.updatePersonObject()
             }
         this.notify()
     }
-
+    
     showForm = () => {
         this.setState({show: true})
     }
@@ -124,21 +116,14 @@ class PersonalInfo extends Component {
         let index = personInfo.findIndex((item, index) => {
             return item.f_name == this.state.personName 
         })
-        console.log(index, 'index VAlue')
-        console.log(this.state.data, 'this.state.datathis.state.data')
         personInfo[index] = this.state.data
-
         this.setState({
             personInfo,
             showSave:true
         }, () => {this.savePersonInfo()})
     }
     
-    
-
     render(){
-        console.log(this.state.data, 'data inside render')
-
         return (
             <Fragment>
                    <h3 className="heading"><button className="add_info_btn" onClick={() => this.showForm() }><i class="fa fa-plus"></i><span>Add Personal Info</span></button></h3>
