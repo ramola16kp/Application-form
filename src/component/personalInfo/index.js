@@ -83,6 +83,7 @@ class PersonalInfo extends Component {
     savePersonInfo = () => {
         localStorage.setItem("details", JSON.stringify(this.state.personInfo))
         setTimeout(() =>  this.resetForm(), 2000)
+        history.push('/table')
     }
 
     notify = () => {
@@ -174,7 +175,7 @@ class PersonalInfo extends Component {
                         <ToastContainer autoClose={1000}
                         transition={Zoom}
                     />
-                        <button  className="btn btn-success btn-next" >{this.state.showSave ? "save" : "Update"}</button>
+                        <button  className="btn btn-success btn-next"  >{this.state.showSave ? "save" : "Update"}</button>
                    </form> : ""
                     }
             </Fragment>
@@ -182,3 +183,14 @@ class PersonalInfo extends Component {
     }
 }
 export default PersonalInfo
+
+
+// downloadImage = () => {
+//     //let payload = JSON.parse(JSON.stringify(this.state.payload))
+//     var link = document.createElement('a');
+//     link.href = `${this.state.payload.imageUrl}`;
+//     link.download = `${this.state.payload.imageUrl}`;
+//     document.body.appendChild(link);
+//     link.click();
+//     document.body.removeChild(link);
+//   }
